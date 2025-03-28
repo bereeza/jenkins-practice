@@ -21,17 +21,17 @@ pipeline {
                 }
             }
         }
-        stage('Build') {
-            steps {
-                script {
-                    sh 'npm -v'
-                }
-            }
-        }
         stage('Test') {
             steps {
                 script {
                     sh 'echo $JENKINS_URL'
+                }
+            }
+        }
+        stage('Build') {
+            steps {
+                script {
+                    sh 'npm -v'
                 }
             }
         }
